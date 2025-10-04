@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3 uid="uid://gbfnovejv8a4"]
+
+[ext_resource type="Script" uid="uid://dklo6bvuxh3y7" path="res://title.gd" id="1_3xoar"]
+[ext_resource type="Texture2D" uid="uid://5govfdcv5rkl" path="res://assets/bg.png" id="1_y7k74"]
+[ext_resource type="Texture2D" uid="uid://b8wb55qmn0qfh" path="res://assets/belt1.png" id="2_kpexm"]
+[ext_resource type="Shader" uid="uid://birj3r0kgtx64" path="res://jumble.gdshader" id="2_mom7w"]
+[ext_resource type="FontFile" uid="uid://b3p8qt6d7ssq5" path="res://assets/friendlyscribbles.ttf" id="3_3xoar"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7lgly"]
+shader = ExtResource("2_mom7w")
+shader_parameter/pixelation_size = 2.0000000475
+shader_parameter/displacement_amount = 0.5750000273125
+shader_parameter/interval = 0.15000000642648
+
+[node name="Title" type="Node2D"]
+script = ExtResource("1_3xoar")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+top_level = true
+z_index = 1000
+material = SubResource("ShaderMaterial_7lgly")
+offset_left = -341.0
+offset_top = -438.0
+offset_right = -301.0
+offset_bottom = -398.0
+scale = Vector2(47.838688, 61.556133)
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(552, 269)
+rotation = 4.708868
+scale = Vector2(1.2994883, 1.2994883)
+texture = ExtResource("1_y7k74")
+
+[node name="Belt1" type="Sprite2D" parent="."]
+position = Vector2(485, 226.658)
+scale = Vector2(0.5, 0.358)
+texture = ExtResource("2_kpexm")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 2.9563904e-05
+offset_top = 134.52199
+offset_right = 240.00003
+offset_bottom = 187.52199
+scale = Vector2(3.8843834, 3.9028537)
+theme_override_colors/font_color = Color(0.23529412, 0.62352943, 0.6117647, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("3_3xoar")
+theme_override_font_sizes/font_size = 24
+text = "Patch-Flip"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 18.000046
+offset_top = 231.52199
+offset_right = 258.00003
+offset_bottom = 284.52197
+scale = Vector2(3.8843842, 3.9028547)
+theme_override_colors/font_color = Color(0.9372549, 0.4117647, 0.18431373, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("3_3xoar")
+theme_override_font_sizes/font_size = 24
+text = "Scout Camp"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 274.0
+offset_top = 22.0
+offset_right = 420.0
+offset_bottom = 75.0
+scale = Vector2(3.0600765, 2.2353277)
+theme_override_colors/font_color = Color(0.972549, 0.79607844, 0.7294118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("3_3xoar")
+theme_override_font_sizes/font_size = 24
+text = "welcome to"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 159.0
+offset_top = 390.0
+offset_right = 372.0
+offset_bottom = 443.0
+scale = Vector2(3.0600765, 2.2353277)
+theme_override_colors/font_color = Color(0.972549, 0.79607844, 0.7294118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("3_3xoar")
+theme_override_font_sizes/font_size = 24
+text = "press any key
+to start tournament"
+horizontal_alignment = 1

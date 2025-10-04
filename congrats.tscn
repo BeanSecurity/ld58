@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://ch06g63ylwmue"]
+
+[ext_resource type="Script" uid="uid://cklyh2lj8yvtp" path="res://congrats.gd" id="1_xjfqp"]
+[ext_resource type="Script" uid="uid://c5ewrsldusin1" path="res://camera_2d.gd" id="2_ip2g8"]
+[ext_resource type="Shader" uid="uid://birj3r0kgtx64" path="res://jumble.gdshader" id="2_nlfrg"]
+[ext_resource type="Texture2D" uid="uid://5govfdcv5rkl" path="res://assets/bg.png" id="3_ip2g8"]
+[ext_resource type="Texture2D" uid="uid://b8wb55qmn0qfh" path="res://assets/belt1.png" id="4_o2n5g"]
+[ext_resource type="FontFile" uid="uid://b3p8qt6d7ssq5" path="res://assets/friendlyscribbles.ttf" id="6_ip2g8"]
+[ext_resource type="AudioStream" uid="uid://nlmacf6bxfh3" path="res://assets/clack3.wav" id="7_o2n5g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0wikg"]
+shader = ExtResource("2_nlfrg")
+shader_parameter/pixelation_size = 2.0000000475
+shader_parameter/displacement_amount = 0.5750000273125
+shader_parameter/interval = 0.15000000642648
+
+[node name="Congrats" type="Node2D"]
+script = ExtResource("1_xjfqp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+zoom = Vector2(0.8, 0.8)
+script = ExtResource("2_ip2g8")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+top_level = true
+material = SubResource("ShaderMaterial_0wikg")
+offset_left = -341.0
+offset_top = -438.0
+offset_right = -301.0
+offset_bottom = -398.0
+scale = Vector2(47.838688, 61.556133)
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(552, 269)
+rotation = 4.708868
+scale = Vector2(1.2994883, 1.2994883)
+texture = ExtResource("3_ip2g8")
+
+[node name="Belt2" type="Sprite2D" parent="."]
+position = Vector2(594.0748, 370.18985)
+scale = Vector2(0.6150748, 0.47347537)
+texture = ExtResource("4_o2n5g")
+
+[node name="Pogs2" type="Node2D" parent="."]
+position = Vector2(331.07483, 266.18985)
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 120.00001
+offset_top = 147.0
+offset_right = 423.0
+offset_bottom = 312.0
+scale = Vector2(3.0600765, 2.2353277)
+theme_override_colors/font_color = Color(0.972549, 0.79607844, 0.7294118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("6_ip2g8")
+theme_override_font_sizes/font_size = 24
+text = "Your collection:"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 133.00002
+offset_top = 27.000008
+offset_right = 373.0
+offset_bottom = 80.0
+scale = Vector2(3.8843842, 3.9028547)
+theme_override_colors/font_color = Color(0.9372549, 0.4117647, 0.18431373, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("6_ip2g8")
+theme_override_font_sizes/font_size = 24
+text = "CONGRATULATION!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 127.0
+offset_top = 20.0
+offset_right = 367.0
+offset_bottom = 73.0
+scale = Vector2(3.8843834, 3.9028537)
+theme_override_colors/font_color = Color(0.23529412, 0.62352943, 0.6117647, 1)
+theme_override_fonts/font = ExtResource("6_ip2g8")
+theme_override_font_sizes/font_size = 24
+text = "CONGRATULATION!"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 417.0
+offset_top = 565.0
+offset_right = 712.0
+offset_bottom = 638.0
+theme_override_fonts/font = ExtResource("6_ip2g8")
+theme_override_font_sizes/font_size = 64
+text = "Play again"
+
+[node name="ApplyAudioStreamPlayer" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("7_o2n5g")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

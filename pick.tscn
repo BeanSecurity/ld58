@@ -1,0 +1,138 @@
+[gd_scene load_steps=10 format=3 uid="uid://c4n6l2qb6yyx"]
+
+[ext_resource type="Script" uid="uid://c7f0fiy1pyi3q" path="res://pick.gd" id="1_hm0wx"]
+[ext_resource type="Texture2D" uid="uid://5govfdcv5rkl" path="res://assets/bg.png" id="2_nk7mp"]
+[ext_resource type="Shader" uid="uid://birj3r0kgtx64" path="res://jumble.gdshader" id="3_cpp7o"]
+[ext_resource type="Texture2D" uid="uid://b8wb55qmn0qfh" path="res://assets/belt1.png" id="3_sp3o3"]
+[ext_resource type="FontFile" uid="uid://b3p8qt6d7ssq5" path="res://assets/friendlyscribbles.ttf" id="5_nk7mp"]
+[ext_resource type="Texture2D" uid="uid://bbj26cnv2peqx" path="res://assets/area1.png" id="6_cpp7o"]
+[ext_resource type="Script" uid="uid://c5ewrsldusin1" path="res://camera_2d.gd" id="6_sp3o3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jtvtf"]
+shader = ExtResource("3_cpp7o")
+shader_parameter/pixelation_size = 2.0000000475
+shader_parameter/displacement_amount = 0.5750000273125
+shader_parameter/interval = 0.15000000642648
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sp3o3"]
+size = Vector2(492.41022, 167.82062)
+
+[node name="Pick" type="Node2D"]
+script = ExtResource("1_hm0wx")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(558, 305)
+rotation = 4.708868
+scale = Vector2(1.2994883, 1.2994883)
+texture = ExtResource("2_nk7mp")
+
+[node name="Belt1" type="Sprite2D" parent="."]
+position = Vector2(574, 487.00003)
+scale = Vector2(0.6150748, 0.47347537)
+texture = ExtResource("3_sp3o3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+top_level = true
+material = SubResource("ShaderMaterial_jtvtf")
+offset_left = -341.0
+offset_top = -438.0
+offset_right = -301.0
+offset_bottom = -398.0
+scale = Vector2(47.838688, 61.556133)
+
+[node name="Pogs" type="Node2D" parent="."]
+
+[node name="Button1" type="Button" parent="."]
+visible = false
+offset_left = 202.0
+offset_top = 217.0
+offset_right = 210.0
+offset_bottom = 225.0
+
+[node name="Button2" type="Button" parent="."]
+visible = false
+offset_left = 536.0
+offset_top = 225.0
+offset_right = 544.0
+offset_bottom = 233.0
+
+[node name="Button3" type="Button" parent="."]
+visible = false
+offset_left = 860.0
+offset_top = 226.0
+offset_right = 868.0
+offset_bottom = 234.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 675.00006
+offset_top = 85.0
+offset_right = 830.00006
+offset_bottom = 138.0
+scale = Vector2(3.0600765, 2.2353277)
+theme_override_colors/font_color = Color(0.972549, 0.79607844, 0.7294118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("5_nk7mp")
+theme_override_font_sizes/font_size = 24
+text = "<- pick one 
+reward patch"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 672.00006
+offset_top = 415.0
+offset_right = 831.00006
+offset_bottom = 468.0
+scale = Vector2(3.0600765, 2.2353277)
+theme_override_colors/font_color = Color(0.972549, 0.79607844, 0.7294118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("5_nk7mp")
+theme_override_font_sizes/font_size = 24
+text = "pin it on your
+ patch-belt"
+horizontal_alignment = 1
+
+[node name="EnemyHP2" type="Label" parent="."]
+visible = false
+offset_left = 170.0
+offset_top = 58.0
+offset_right = 411.0
+offset_bottom = 83.0
+scale = Vector2(3.0600765, 2.2353277)
+theme_override_colors/font_color = Color(0.972549, 0.79607844, 0.7294118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("5_nk7mp")
+theme_override_font_sizes/font_size = 24
+text = "hold space to flip pog"
+horizontal_alignment = 1
+
+[node name="Area1" type="Sprite2D" parent="." groups=["pick"]]
+visible = false
+position = Vector2(212, 468)
+scale = Vector2(2.443085, 2.443085)
+texture = ExtResource("6_cpp7o")
+
+[node name="Area2D" type="Area2D" parent="Area1"]
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area1/Area2D"]
+position = Vector2(151.24323, 25.377747)
+shape = SubResource("RectangleShape2D_sp3o3")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+zoom = Vector2(0.8, 0.8)
+script = ExtResource("6_sp3o3")
+
+[node name="pog1" type="Node2D" parent="."]
+position = Vector2(108, 148)
+
+[node name="pog2" type="Node2D" parent="."]
+position = Vector2(506, 157)
+
+[node name="pog3" type="Node2D" parent="."]
+position = Vector2(314, 154)
+
+[node name="Pogs2" type="Node2D" parent="."]
+position = Vector2(47.96, 385)
+
+[connection signal="area_entered" from="Area1/Area2D" to="." method="_on_area_2d_area_entered"]

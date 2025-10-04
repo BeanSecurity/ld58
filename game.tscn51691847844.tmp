@@ -1,0 +1,88 @@
+[gd_scene load_steps=8 format=3 uid="uid://cbtbuasntw26o"]
+
+[ext_resource type="Script" uid="uid://dkjlqctqegmwr" path="res://game.gd" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://con6tkl7ma8ny" path="res://pog.tscn" id="2_e2o6t"]
+[ext_resource type="Shader" uid="uid://birj3r0kgtx64" path="res://jumble.gdshader" id="3_feb5d"]
+[ext_resource type="Script" uid="uid://l2d5rnddo7kc" path="res://hp.gd" id="4_fc0e3"]
+[ext_resource type="FontFile" uid="uid://b3p8qt6d7ssq5" path="res://assets/friendlyscribbles.ttf" id="5_7jktm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fc0e3"]
+shader = ExtResource("3_feb5d")
+shader_parameter/pixelation_size = 2.0000000475
+shader_parameter/displacement_amount = 0.5750000273125
+shader_parameter/interval = 0.15000000642648
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2o6t"]
+size = Vector2(200, 200)
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_e2o6t")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+top_level = true
+material = SubResource("ShaderMaterial_fc0e3")
+offset_left = -346.0
+offset_top = -433.0
+offset_right = -306.0
+offset_bottom = -393.0
+scale = Vector2(47.838688, 61.556133)
+
+[node name="Pogs" type="Node2D" parent="."]
+
+[node name="Pog" parent="Pogs" instance=ExtResource("2_e2o6t")]
+position = Vector2(275, 222)
+rotation = -0.3780145
+scale = Vector2(0.99999994, 0.99999994)
+sides = Array[int]([5, 1])
+
+[node name="Pog2" parent="Pogs" instance=ExtResource("2_e2o6t")]
+position = Vector2(400, 125)
+rotation = 0.8349605
+sides = Array[int]([1, 1])
+
+[node name="Enemy" type="Node2D" parent="." groups=["enemy_hp"]]
+script = ExtResource("4_fc0e3")
+
+[node name="HPArea" type="Area2D" parent="Enemy"]
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/HPArea"]
+position = Vector2(885, 99)
+shape = SubResource("RectangleShape2D_e2o6t")
+
+[node name="Player" type="Node2D" parent="." groups=["player_hp"]]
+script = ExtResource("4_fc0e3")
+
+[node name="HPArea" type="Area2D" parent="Player"]
+position = Vector2(0, 446)
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/HPArea"]
+position = Vector2(885, 99)
+shape = SubResource("RectangleShape2D_e2o6t")
+
+[node name="PlayerHP" type="Label" parent="."]
+offset_left = 785.0
+offset_top = 449.99994
+offset_right = 849.78
+offset_bottom = 474.99994
+scale = Vector2(3.0600767, 2.2353277)
+theme_override_colors/font_color = Color(0.9970792, 0.5101589, 0.63593966, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("5_7jktm")
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+
+[node name="EnemyHP" type="Label" parent="."]
+offset_left = 785.0
+offset_top = 23.000002
+offset_right = 849.78
+offset_bottom = 48.0
+scale = Vector2(3.0600765, 2.2353277)
+theme_override_colors/font_color = Color(0.9970792, 0.5101589, 0.63593966, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("5_7jktm")
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
