@@ -74,6 +74,7 @@ func _process(_delta: float) -> void:
 	$EnemyHP.text="%d/%d"%[enemy_hp,max_enemy_hp]
 	$PlayerArmor.text="%d"%[player_armor]
 	$EnemyArmor.text="%d"%[enemy_armor]
+	$Level.text="level: %d/%d"%[G.level+1, G.enemy_level.size()]
 	
 	if enemy_hp<=0:
 		$Button.text="YOU WON!"

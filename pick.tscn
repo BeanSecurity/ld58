@@ -77,6 +77,20 @@ text = "<- pick one
 reward patch"
 horizontal_alignment = 1
 
+[node name="Label3" type="Label" parent="."]
+offset_left = 703.0
+offset_top = 243.0
+offset_right = 976.0
+offset_bottom = 296.0
+scale = Vector2(1.5136791, 1.1057138)
+theme_override_colors/font_color = Color(0.972549, 0.79607844, 0.7294118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("5_nk7mp")
+theme_override_font_sizes/font_size = 24
+text = "hold right mouse button
+ to see other side"
+horizontal_alignment = 1
+
 [node name="Label2" type="Label" parent="."]
 offset_left = 672.00006
 offset_top = 415.0

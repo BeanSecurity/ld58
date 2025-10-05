@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Talo="*res://addons/talo/talo_manager.gd"
 G="*res://global.gd"
+RollAudio="*res://roll_audio.tscn"
 
 [display]
 

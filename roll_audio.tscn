@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm0qgy5ck73mm"]
+
+[ext_resource type="AudioStream" uid="uid://d3cdmnedjpddi" path="res://assets/roll1.wav" id="1_ug75j"]
+
+[node name="RollAudio" type="AudioStreamPlayer"]
+stream = ExtResource("1_ug75j")
+volume_db = -1.735

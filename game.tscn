@@ -1960,10 +1960,10 @@ text = "1"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
-offset_left = 772.0
-offset_top = 272.0
-offset_right = 1023.0
-offset_bottom = 345.0
+offset_left = 815.0
+offset_top = 227.0
+offset_right = 1066.0
+offset_bottom = 300.0
 theme_override_fonts/font = ExtResource("5_7jktm")
 theme_override_font_sizes/font_size = 64
 text = "end turn"
@@ -1972,10 +1972,10 @@ text = "end turn"
 stream = ExtResource("11_iotsf")
 
 [node name="Button2" type="Button" parent="."]
-offset_left = 799.00006
-offset_top = 361.00003
-offset_right = 1074.0
-offset_bottom = 434.00003
+offset_left = 853.0
+offset_top = 317.0
+offset_right = 1128.0
+offset_bottom = 390.0
 scale = Vector2(0.66, 0.66)
 theme_override_fonts/font = ExtResource("5_7jktm")
 theme_override_font_sizes/font_size = 64
@@ -1984,6 +1984,19 @@ text = "show tips"
 
 [node name="ApplyAudioStreamPlayer" type="AudioStreamPlayer" parent="Button2"]
 stream = ExtResource("11_iotsf")
+
+[node name="Level" type="Label" parent="."]
+offset_left = 583.99994
+offset_top = 384.0
+offset_right = 1005.99994
+offset_bottom = 441.00003
+scale = Vector2(1.6963468, 1.239149)
+theme_override_colors/font_color = Color(0.972549, 0.79607844, 0.7294118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("5_7jktm")
+theme_override_font_sizes/font_size = 26
+text = "level: 1/5"
+horizontal_alignment = 1
 
 [node name="EnemyTimer" type="Timer" parent="."]
 one_shot = true

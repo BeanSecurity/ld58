@@ -18,7 +18,7 @@ var starting_player_pogs=[
 ]
 
 
-var player_pogs=starting_player_pogs
+var player_pogs=starting_player_pogs.duplicate()
 
 var enemy_level=[
 	[
@@ -35,8 +35,9 @@ var enemy_level=[
 	[G.PogSideType.NONE,G.PogSideType.BUFF],
 ],
 [
-	[G.PogSideType.DAMAGE,G.PogSideType.ARMOR],
-	[G.PogSideType.HEAL,G.PogSideType.NONE],
+	[G.PogSideType.NONE,G.PogSideType.ARMOR],
+	#[G.PogSideType.DAMAGE,G.PogSideType.ARMOR],
+	#[G.PogSideType.HEAL,G.PogSideType.NONE],
 	[G.PogSideType.DAMAGE,G.PogSideType.NONE],
 	[G.PogSideType.FLIP,G.PogSideType.BUFF],
 	[G.PogSideType.FLIP,G.PogSideType.BUFF],
