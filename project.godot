@@ -13,6 +13,10 @@ config_version=5
 config/name="project jam LD58"
 run/main_scene="uid://gbfnovejv8a4"
 config/features=PackedStringArray("4.5", "GL Compatibility")
+boot_splash/bg_color=Color(0.64705884, 0.38431373, 0.2627451, 1)
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+boot_splash/image="uid://b30i6ceyp3d5o"
 config/icon="res://icon.svg"
 
 [autoload]

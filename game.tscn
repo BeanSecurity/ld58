@@ -1998,6 +1998,19 @@ theme_override_font_sizes/font_size = 26
 text = "level: 1/5"
 horizontal_alignment = 1
 
+[node name="Level2" type="Label" parent="."]
+offset_left = 583.99994
+offset_top = 384.0
+offset_right = 1005.99994
+offset_bottom = 441.00003
+scale = Vector2(1.6963468, 1.239149)
+theme_override_colors/font_color = Color(0.972549, 0.79607844, 0.7294118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72156864)
+theme_override_fonts/font = ExtResource("5_7jktm")
+theme_override_font_sizes/font_size = 26
+text = "level: 1/5"
+horizontal_alignment = 1
+
 [node name="EnemyTimer" type="Timer" parent="."]
 one_shot = true
 

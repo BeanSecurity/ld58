@@ -180,6 +180,7 @@ func get_rare_pog():
 	return a[0]
 
 func _ready() -> void:
+	RenderingServer.set_default_clear_color(Color("392a1c"))  
 	register()
 
 func register():
