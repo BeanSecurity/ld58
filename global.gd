@@ -21,7 +21,51 @@ var starting_player_pogs=[
 var player_pogs=starting_player_pogs.duplicate()
 
 var enemy_level=[
+	#[
+	#[G.PogSideType.DAMAGE,G.PogSideType.NONE],
+	#[G.PogSideType.FLIP,G.PogSideType.NONE],
+	#[G.PogSideType.NONE,G.PogSideType.BUFF],
+	#[G.PogSideType.NONE,G.PogSideType.BUFF],
+#],	
+#[
+	#[G.PogSideType.DAMAGE,G.PogSideType.NONE],
+	#[G.PogSideType.ARMOR,G.PogSideType.NONE],
+	#[G.PogSideType.FLIP,G.PogSideType.NONE],
+	#[G.PogSideType.BUFF,G.PogSideType.DOUBLE],
+	#[G.PogSideType.NONE,G.PogSideType.BUFF],
+#],
+#[
+	#[G.PogSideType.NONE,G.PogSideType.ARMOR],
+	##[G.PogSideType.DAMAGE,G.PogSideType.ARMOR],
+	##[G.PogSideType.HEAL,G.PogSideType.NONE],
+	#[G.PogSideType.DAMAGE,G.PogSideType.NONE],
+	#[G.PogSideType.FLIP,G.PogSideType.BUFF],
+	#[G.PogSideType.FLIP,G.PogSideType.BUFF],
+	#[G.PogSideType.NONE,G.PogSideType.DOUBLE],
+#],
+#[
+	#[G.PogSideType.DAMAGE,G.PogSideType.ARMOR],
+	#[G.PogSideType.DAMAGE,G.PogSideType.SPEAR],
+	#[G.PogSideType.HEAL,G.PogSideType.NONE],
+	#[G.PogSideType.FLIP,G.PogSideType.BUFF],
+	#[G.PogSideType.BUFF,G.PogSideType.FLIP],
+	#[G.PogSideType.NONE,G.PogSideType.DOUBLE],
+#],
+#[
+	#[G.PogSideType.DAMAGE,G.PogSideType.ARMOR],
+	#[G.PogSideType.DAMAGE,G.PogSideType.SPEAR],
+	#[G.PogSideType.HEAL,G.PogSideType.ARMOR],
+	#[G.PogSideType.FLIP,G.PogSideType.BUFF],
+	#[G.PogSideType.BUFF,G.PogSideType.FLIP],
+	#[G.PogSideType.NONE,G.PogSideType.DOUBLE],
+#],
 	[
+	[G.PogSideType.DAMAGE,G.PogSideType.NONE],
+	[G.PogSideType.FLIP,G.PogSideType.NONE],
+	#[G.PogSideType.NONE,G.PogSideType.BUFF],
+	[G.PogSideType.NONE,G.PogSideType.BUFF],
+],
+[
 	[G.PogSideType.DAMAGE,G.PogSideType.NONE],
 	[G.PogSideType.FLIP,G.PogSideType.NONE],
 	[G.PogSideType.NONE,G.PogSideType.BUFF],
@@ -51,14 +95,7 @@ var enemy_level=[
 	[G.PogSideType.BUFF,G.PogSideType.FLIP],
 	[G.PogSideType.NONE,G.PogSideType.DOUBLE],
 ],
-[
-	[G.PogSideType.DAMAGE,G.PogSideType.ARMOR],
-	[G.PogSideType.DAMAGE,G.PogSideType.SPEAR],
-	[G.PogSideType.HEAL,G.PogSideType.ARMOR],
-	[G.PogSideType.FLIP,G.PogSideType.BUFF],
-	[G.PogSideType.BUFF,G.PogSideType.FLIP],
-	[G.PogSideType.NONE,G.PogSideType.DOUBLE],
-],
+
 ]
 #var enemy_pogs=enemy_level[0]
 var level=0

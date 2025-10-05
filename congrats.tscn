@@ -43,7 +43,7 @@ scale = Vector2(0.6150748, 0.47347537)
 texture = ExtResource("4_o2n5g")
 
 [node name="Pogs2" type="Node2D" parent="."]
-position = Vector2(331.07483, 266.18985)
+position = Vector2(459, 266)
 
 [node name="Label6" type="Label" parent="."]
 offset_left = 120.00001

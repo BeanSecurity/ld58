@@ -44,7 +44,8 @@ func toss():
 	rotation=randf_range(-PI/4,PI/4)
 	#$TossAudioStreamPlayer.pitch_scale=r
 	#$TossAudioStreamPlayer.play()
-	RollAudio.play(-r*0.3)
+	#RollAudio.play(-r*0.3)
+	RollAudio.play()
 
 func _process(_delta):
 	if hovering and not tossing and not dragging:
