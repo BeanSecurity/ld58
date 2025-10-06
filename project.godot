@@ -14,7 +14,6 @@ config/name="project jam LD58"
 run/main_scene="uid://gbfnovejv8a4"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(0.64705884, 0.38431373, 0.2627451, 1)
-boot_splash/fullsize=false
 boot_splash/use_filter=false
 boot_splash/image="uid://b30i6ceyp3d5o"
 config/icon="res://icon.svg"
@@ -30,7 +29,6 @@ RollAudio="*res://roll_audio.tscn"
 window/size/viewport_width=960
 window/size/viewport_height=540
 window/stretch/mode="viewport"
-window/stretch/scale_mode="integer"
 
 [editor_plugins]
 
